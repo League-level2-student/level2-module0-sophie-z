@@ -23,12 +23,22 @@ public class _00_ArrayCheatSheet {
 		for (int integer : integers) {
 		     Random rand = new Random();
 		     integer = rand.nextInt(50);
+		
 		}
 		//8. without printing the entire array, print only the smallest number in the array
-		
+		int numb = integers[0];
+		int large = integers[0];
 		//9 print the entire array to see if step 8 was correct
 		for(int i=0; i<integers.length; i++) {
 			System.out.println(integers[i]);
+			if(integers[i]<numb) {
+				numb = integers[i];
+			}
+			System.out.println(numb);
+			if(integers[i]>large) {
+				large = integers[i];
+			}
+			System.out.println(large);
 		}
 		//10. print the largest number in the array.
 		
