@@ -36,7 +36,7 @@ public class _02_FindTheHiddenButton implements ActionListener{
 		String reply = JOptionPane.showInputDialog("Enter a positive number.");
 		int answer = Integer.parseInt(reply);
 		//4. Initialize the array of JButtons to be the size of the int created in step 3
-		JButton[] buttons = new JButton[hiddenButton];
+		buttons = new JButton[answer];
 		//5. Make a for loop to iterate through the JButton array
 		for(int i=0; i<buttons.length; i++) {
 			//6. initialize each JButton in the array
@@ -61,17 +61,27 @@ public class _02_FindTheHiddenButton implements ActionListener{
 		buttons[hiddenButton].setText("ME");
 		//15. Use Thread.sleep(1000); to pause the program.
 		//    Surround it with a try/catch - use Eclipse helper for this
-		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//16. Set the text of the JButton located at hiddenButton to be blank.
-		
+		buttons[hiddenButton].setText("");
 	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton buttonClicked = (JButton)e.getSource();
 		
 		//17. if the hiddenButton is clicked, tell the user that they win.
-		
+		if(buttonClicked==buttons[hiddenButton]) {
+			JOptionPane.showMessageDialog(null, "Congratulations! You won!");
+		}
 		//18. else tell them to try again
+		else {
+			JOptionPane.showMessageDialog(null, "Oops. Try again.");
+		}
 	}
 }
