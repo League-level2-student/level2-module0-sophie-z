@@ -9,7 +9,7 @@ public class _00_ArrayCheatSheet {
 		//2. print the third element in the array
 		System.out.println(string[2]);
 		//3. set the third element to a different value
-		string[2] = " ";
+		string[2] = "A";
 		//4. print the third element again
 		System.out.println(string[2]);
 		//5. use a for loop to print all the values in the array
@@ -23,7 +23,6 @@ public class _00_ArrayCheatSheet {
 		for (int integer : integers) {
 		     Random rand = new Random();
 		     integer = rand.nextInt(50);
-		
 		}
 		//8. without printing the entire array, print only the smallest number in the array
 		int numb = integers[0];
